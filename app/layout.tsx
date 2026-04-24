@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
@@ -103,6 +104,18 @@ export default function RootLayout({
 
         {/* Google Cast SDK */}
         <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1" async />
+
+        {/* 广告代码 */}
+        <Script
+          src="https://molecularshindy.com/d2/6d/20/d26d2054c89e8ae505c1837035eb8f79.js"
+          strategy="afterInteractive"
+          onError={(e) => {
+            console.error('广告脚本加载失败:', e);
+          }}
+          onLoad={() => {
+            console.log('广告脚本加载成功');
+          }}
+        />
 
         {/* Scroll Performance Optimization Script */}
         <script
