@@ -109,12 +109,6 @@ export default function RootLayout({
         <Script
           src="https://molecularshindy.com/d2/6d/20/d26d2054c89e8ae505c1837035eb8f79.js"
           strategy="afterInteractive"
-          onError={(e) => {
-            console.error('广告脚本加载失败:', e);
-          }}
-          onLoad={() => {
-            console.log('广告脚本加载成功');
-          }}
         />
 
         {/* Scroll Performance Optimization Script */}
